@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        #holder {
+            height: 100%;
+            width: 100%;
+        }
+
+        .node_table {
+            background-color: rgba(68, 255, 51, 0.2);
+            position: absolute;
+            top: 0;
+            left: 12px;
+        }
+
+        .drag_tr {
+            height: 40px;
+            background-color: rgba(255, 34, 255, 0.41);
+        }
+
+        .drag_tr:hover {
+            cursor: move;
+        }
+
+        .line_out,
+        .line_in {
+            cursor: pointer;
+        }
+
+    </style>
+    <script src="/lib/raphael-min.js"></script>
+    <script src="/lib/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+
+</head>
+
+<body>
+    <div id="holder">
+        <table class="node_table drag" id="dt14942991979517197" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr class="drag_tr tr1" id="title14942991979513566">
+                    <th class="tableheadz th1" colspan="7" data-which="hd1"><span class="bm">nti_entity_ass</span></th>
+                </tr>
+                <tr class="tr2">
+                    <td class="td1 line_in"></td>
+                    <td class="td2  line_in">键类型</td>
+                    <td class="td3 line_in">名称</td>
+                    <td class="td4  line_out">数据类型</td>
+                    <td class="td5 line_out">长度/精度</td>
+                    <td class="kbtd  line_out"> </td>
+                    <td class="td6 line_out"></td>
+                </tr>
+                <tr class="tr3" id="row14942991979517298">
+                    <td class="td1  line_in" style="color:#f0f;cursor:pointer;">▶in</td>
+                    <td class="td2 line_in">PRIMARY</td>
+                    <td class="td3 line_in">id</td>
+                    <td class="td4 line_out">INT</td>
+                    <td class="td5 line_out">10</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+                <tr class="tr4" id="row14942991979514960">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">createTime</td>
+                    <td class="td4 line_out">DATETIME</td>
+                    <td class="td5 line_out">19</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+                <tr class="tr5" id="row14942991979514024">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">createTime</td>
+                    <td class="td4 line_out">DATETIME</td>
+                    <td class="td5 line_out">19</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+                <tr class="tr6" id="row14942991979519805">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">cnName</td>
+                    <td class="td4 line_out">VARCHAR</td>
+                    <td class="td5 line_out">255</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+                <tr class="tr7" id="row14942991979516403">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">createTime</td>
+                    <td class="td4 line_out">DATETIME</td>
+                    <td class="td5 line_out">19</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+                <tr class="tr8" id="row14942991979515407">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">ctype</td>
+                    <td class="td4 line_out">VARCHAR</td>
+                    <td class="td5 line_out">255</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+                <tr class="tr9" id="row14942991979513943">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">entityCnName</td>
+                    <td class="td4 line_out">VARCHAR</td>
+                    <td class="td5 line_out">255</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="node_table drag1" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr class="drag_tr tr1">
+                    <th class="tableheadz th1" colspan="7" data-which="hd2"><span class="bm">nti_entity_ass</span></th>
+                </tr>
+                <tr class="tr2">
+                    <td class="td1 line_in"></td>
+                    <td class="td2  line_in">键类型</td>
+                    <td class="td3 line_in">名称</td>
+                    <td class="td4  line_out">数据类型</td>
+                    <td class="td5 line_out">长度/精度</td>
+                    <td class="kbtd  line_out"> </td>
+                    <td class="td6 line_out"></td>
+                </tr>
+                <tr class="tr3">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">PRIMARY</td>
+                    <td class="td3 line_in">id</td>
+                    <td class="td4 line_out">INT</td>
+                    <td class="td5 line_out">10</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out" style="color:#f0f;cursor:pointer;">▶out</td>
+                </tr>
+                <tr class="tr4">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">createTime</td>
+                    <td class="td4 line_out">DATETIME</td>
+                    <td class="td5 line_out">19</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+                <tr class="tr5">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">createTime</td>
+                    <td class="td4 line_out">DATETIME</td>
+                    <td class="td5 line_out">19</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+                <tr class="tr6">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">cnName</td>
+                    <td class="td4 line_out">VARCHAR</td>
+                    <td class="td5 line_out">255</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+                <tr class="tr7">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">createTime</td>
+                    <td class="td4 line_out">DATETIME</td>
+                    <td class="td5 line_out">19</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+                <tr class="tr8">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">ctype</td>
+                    <td class="td4 line_out">VARCHAR</td>
+                    <td class="td5 line_out">255</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+                <tr class="tr9">
+                    <td class="td1  line_in">▶</td>
+                    <td class="td2 line_in">非键</td>
+                    <td class="td3 line_in">entityCnName</td>
+                    <td class="td4 line_out">VARCHAR</td>
+                    <td class="td5 line_out">255</td>
+                    <td class="kbtd line_out"> </td>
+                    <td class="td6 line_out">▶</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="node_table" style="height:100px;width:100px;">
+            <div class="drag_tr append" style="height:60px;"></div>
+        </div>
+        <div class="node_table">
+            <button type="button" style="margin-top:20px;" class="btn">Click Me!</button>
+        </div>
+    </div>
+    <script src="/js/test.js"></script>
+</body>
+
+</html>

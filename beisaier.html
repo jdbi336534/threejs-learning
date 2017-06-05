@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wraper {
+            position: relative;
+            float: left;
+            width: 400px;
+            height: 400px;
+            margin-left: 10px;
+            margin-top: 10px;
+            border: 1px solid orange;
+        }
+    </style>
+    <script src="raphael-min.js"></script>
+    <script src="./jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            var raphael_2 = new Raphael('raphael_2', 400, 400);
+
+            //绘制曲线的起止点和控制点
+            //绘制2次贝赛尔曲线
+            // raphael_2.path('M20,120 L100,10 L180,90');
+            raphael_2.path('M20,120 Q100,10 180,90').attr({
+                'stroke-width': "0.8",
+                "fill": "none",
+                "stroke": "rgb(40, 33, 26)",
+                "opacity": "0.9",
+                "stroke-linejoin": "miter",
+                "arrow-end": "classic-wide-long"
+            });
+
+            //绘制曲线的起止点和控制点
+            //绘制2次贝赛尔曲线（第一个是正常绘制，第二个光滑连接）
+            raphael_2.path('M20,370 L120,160 L200,220 L280,280 L380,70');
+            raphael_2.path('M20,370 Q120,160 200,220 T380,70').attr('stroke', 'red');
+
+            // var raphael_3 = new Raphael('raphael_3', 400, 400);
+
+            // //绘制曲线的起止点和控制点
+            // //绘制3次贝赛尔曲线
+            // raphael_2.path('M20,20 L50,80 L150,160 L180,40');
+            // raphael_2.path('M20,20 C50,80 150,160 180,40').attr('stroke', 'red');
+
+            // //绘制曲线的起止点和控制点
+            // //绘制3次贝赛尔曲线
+            // raphael_2.path('M240,180 L200,100 L380,20 L350,160');
+            // raphael_2.path('M240,180 C200,100 380,20 350,160').attr('stroke', 'red');
+
+            // //绘制曲线的起止点和控制点
+            // //绘制3次贝赛尔曲线（第一个是正常绘制，第二个光滑连接）
+            // raphael_3.path('M20,370 L40,270 L100,220 L180,280 L260,340 L320,290 L340,190');
+            // raphael_3.path('M20,370 C40,270 100,220 180,280 S320,290 340,190').attr('stroke', 'red');
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="raphael_2" class="wraper"></div>
+    <div id="raphael_3" class="wraper"></div>
+    <br/>
+</body>
+
+</html>
