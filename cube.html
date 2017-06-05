@@ -75,7 +75,7 @@
     var mesh;
 
     function initObject() {
-        var geometry = new THREE.BoxGeometry(300, 300, 300, 12, 12, 12);
+        var geometry = new THREE.BoxGeometry(300, 300, 300, 14, 14, 14);
         for (var i = 0; i < geometry.faces.length; i += 2) {
             var hex = Math.random() * 0xFFFFFF;
             geometry.faces[i].color.setHex(hex);
@@ -90,7 +90,7 @@
         for (var i = 0, l = mesh.geometry.vertices.length; i < l; i++) {
             var vertex = mesh.geometry.vertices[i];
             vertex.normalize();
-            vertex.multiplyScalar(350);
+            vertex.multiplyScalar(250);
         }
     }
 
@@ -120,7 +120,7 @@
         /*
         这里调用，就可以统计帧数
          */
-        // stats.update();
+        stats.update();
     }
     </script>
 </head>
