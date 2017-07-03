@@ -16,11 +16,12 @@
             margin-top: 10px;
             border: 1px solid orange;
         }
+
     </style>
-    <script src="raphael-min.js"></script>
-    <script src="./jquery-3.2.1.min.js"></script>
+    <script src="./lib/raphael-min.js"></script>
+    <script src="./lib/jquery-3.2.1.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             var raphael_2 = new Raphael('raphael_2', 400, 400);
 
@@ -39,7 +40,7 @@
             //绘制曲线的起止点和控制点
             //绘制2次贝赛尔曲线（第一个是正常绘制，第二个光滑连接）
             raphael_2.path('M20,370 L120,160 L200,220 L280,280 L380,70');
-            raphael_2.path('M20,370 Q120,160 200,220 T380,70').attr('stroke', 'red');
+            raphael_2.path('M20,370 Q120,370 200,220 T380,70').attr('stroke', 'red');
 
             // var raphael_3 = new Raphael('raphael_3', 400, 400);
 
@@ -60,6 +61,7 @@
 
 
         });
+
     </script>
 </head>
 
